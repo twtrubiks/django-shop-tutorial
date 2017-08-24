@@ -1,0 +1,54 @@
+{% extends "shop/base.html" %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+{% block title %}
+    {% if category %}{{ category.title }}{% else %}Products{% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6 col-md-4">
+
+            </div>
+            <div class="col-md-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="{% if product.image %}{{ product.image.url }}
+                              {% else %}{% static "img/no_image.png" %}{% endif %}"
+                         class="img-responsive">
+                    <div class="caption">
+                        <div class="row">
+                            <div class="col-md-6 col-xs-6">
+                                <h3>{{ product.name }}</h3>
+                            </div>
+                            <div class="col-md-6 col-xs-6 price">
+                                <h3>
+                                    <label>${{ product.price }}</label></h3>
+                            </div>
+                        </div>
+                        <p>{{ product.description }}</p>
+                        <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+                        <form action="{% url "cart:cart_add" product.id %}" method="post">
+                            {% csrf_token %}
+                            {% bootstrap_form cart_product_form %}
+                            {% buttons %}
+                                <button type="submit" class="btn btn-success btn-product">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Add to cart
+                                </button>
+                            {% endbuttons %}
+                        </form>
+
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-4">
+
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

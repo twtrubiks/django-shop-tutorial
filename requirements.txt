@@ -1,0 +1,4 @@
+Django
+django-paypal
+django-bootstrap3
+Pillow
