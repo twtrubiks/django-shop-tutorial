@@ -4,7 +4,7 @@
 
 大家一定常看到購物網站，今天要教大家使用 [Django](https://github.com/django/django) 建立一個簡易版購物網站 :smile:
 
-* [Youtube Tutorial]()
+* [Youtube Tutorial 待新增]()
 
 建議對 [Django](https://github.com/django/django) 不熟悉的朋友，可以先觀看我之前寫的文章（ 進入 [Django](https://github.com/django/django)  的世界）
 
@@ -390,7 +390,7 @@ valid_ipn_received.connect(payment_notification)
 
  [Django](https://www.djangoproject.com/) 預設後台
 
- [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+ [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
 ![alt tag](http://i.imgur.com/f805kiP.png)
 
@@ -398,13 +398,13 @@ valid_ipn_received.connect(payment_notification)
 
 ![alt tag](http://i.imgur.com/Zv0yKfL.png)
 
-首頁 - 商品清單頁
+首頁 - 商品清單頁
 
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ![alt tag](http://i.imgur.com/cOmDHa3.png)
 
-商品說明頁
+商品說明頁
 
 ![alt tag](http://i.imgur.com/hNtpyT4.png)
 
@@ -414,7 +414,7 @@ valid_ipn_received.connect(payment_notification)
 
 ![alt tag](http://i.imgur.com/IWJ19We.png)
 
-確認購物明細
+確認購物明細
 
 ![alt tag](http://i.imgur.com/nB8nxZz.png)
 
@@ -428,7 +428,7 @@ valid_ipn_received.connect(payment_notification)
 
 輸入測試買家帳號，
 
-以下提供我自己的測試買家帳號
+以下提供我自己的測試買家帳號
 
 帳號 : dikeooel3ski-buyer@gmail.com
 
@@ -452,7 +452,7 @@ valid_ipn_received.connect(payment_notification)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ```
 
-如要真的要寄出一封信，可參考 [使用 Django 發送信件](https://github.com/twtrubiks/django_social_login_tutorial#%E4%BD%BF%E7%94%A8-django--%E7%99%BC%E9%80%81%E4%BF%A1%E4%BB%B6) ， 基本上改一下設定就可以使用了。
+如要真的要寄出一封信，可參考 [使用 Django 發送信件](https://github.com/twtrubiks/django_social_login_tutorial#%E4%BD%BF%E7%94%A8-django--%E7%99%BC%E9%80%81%E4%BF%A1%E4%BB%B6) ，基本上改一下設定就可以使用了。
 
 之後再到後台觀看
 
@@ -464,21 +464,21 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 [https://www.sandbox.paypal.com/signin](https://www.sandbox.paypal.com/signin)
 
-使用測試  facilitator 登入，
+使用測試  facilitator 登入，
 
-以下提供我自己的測試買家帳號
+以下提供我自己的測試買家帳號
 
 帳號 : dikeooel3ski-facilitator@gmail.com
 
 密碼 : djurwo,wfeqwe3
 
-接受這筆付款
+接受這筆付款
 
 ![alt tag](http://i.imgur.com/zqB3ju4.png)
 
-當你一按接受，PayPal 就會發送一個 IPN 的通知。
+當你一按接受，PayPal 就會發送一個 IPN 的通知。
 
-請記得，這裡就是我們要用 ngrok 的原因，透過 ngrok 接收  IPN 的通知，如下圖
+請記得，這裡就是我們要用 ngrok 的原因，透過 ngrok 接收  IPN 的通知，如下圖
 
 ![alt tag](http://i.imgur.com/UqfGLVB.png)
 
