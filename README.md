@@ -4,7 +4,9 @@
 
 大家一定常看到購物網站，今天要教大家使用 [Django](https://github.com/django/django) 建立一個簡易版購物網站 :smile:
 
-* [Youtube Tutorial]()
+* [Youtube Tutorial - part1](https://youtu.be/S_4nld8XDY8)
+
+* [Youtube Tutorial - part2](https://youtu.be/9pekT1AZ_T8)
 
 建議對 [Django](https://github.com/django/django) 不熟悉的朋友，可以先觀看我之前寫的文章（ 進入 [Django](https://github.com/django/django)  的世界）
 
